@@ -84,114 +84,128 @@ class _CuadroState extends State<Cuadro> {
   @override
   Widget build(BuildContext context) {
     final elevatedButton = ElevatedButton.styleFrom(
-        primary: Colors.green,
-        shadowColor: Colors.red[700],
-        elevation: 10,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(32.0)),
-        minimumSize: Size(80, 40),
-        side: BorderSide(width: 2, color: Colors.black));
+      primary: Colors.deepPurpleAccent,
+      shadowColor: Colors.purple,
+      elevation: 10,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+      minimumSize: Size(80, 40),
+    );
 
-    return Scaffold(
-        body: SafeArea(
-      child: GridView.count(
-        crossAxisCount: 3,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        padding: EdgeInsets.all(10),
-        children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.red),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonOne(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.grey),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonTwo(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.red),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonThree(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.grey),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonFour(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.red),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonFive(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.grey),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonSix(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.red),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonSeven(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.grey),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonEight(data: data)],
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
+    return GridView.count(
+      crossAxisCount: 3,
+      mainAxisSpacing: 10,
+      crossAxisSpacing: 10,
+      padding: EdgeInsets.all(10),
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.red,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [ButtonNive(data: data)],
-            ),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonOne(data: data)],
           ),
-          Text(
-            this.answer,
-            style: TextStyle(fontSize: 20, letterSpacing: 2),textAlign: TextAlign.center,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonTwo(data: data)],
           ),
-          ElevatedButton(
-              style: elevatedButton,
-              onPressed: () {
-                result();
-              },
-              child: Text(
-                "Validar Cuadro Magico",
-                style: TextStyle(
-                  letterSpacing: 2,
-                ),
-              )),
-        ],
-      ),
-    ));
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonThree(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonFour(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonFive(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonSix(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonSeven(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.purple[900]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonEight(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.purple[900],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [ButtonNive(data: data)],
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                this.answer,
+                style: TextStyle(fontSize: 20, letterSpacing: 2),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+        ElevatedButton(
+            style: elevatedButton,
+            onPressed: () {
+              result();
+            },
+            child: Text(
+              "Validar Cuadro Magico",
+              style: TextStyle(letterSpacing: 2),
+              textAlign: TextAlign.center,
+            )),
+      ],
+    );
   }
 }
 

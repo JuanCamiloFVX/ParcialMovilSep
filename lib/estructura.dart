@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:parcial_cuadromagico/gridview.dart';
 
-class WidgetDinamico extends StatefulWidget {
+class Estructura extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _WidgetDinamico();
+    return _Estructura();
   }
 }
 
-class _WidgetDinamico extends State<WidgetDinamico> {
+class _Estructura extends State<Estructura> {
   @override
   Widget build(BuildContext context) {
     return Column(
